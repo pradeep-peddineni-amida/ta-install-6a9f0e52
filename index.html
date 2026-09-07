@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Install NC Medicaid</title>
+<style>
+  :root {
+    --navy: #0B2E6F;
+    --navy-d: #082353;
+    --ink: #161B26;
+    --grey: #59616E;
+    --faint: #8C95A3;
+    --paper: #ffffff;
+    --panel: #F2F5FA;
+    --warn: #B4501B;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-d) 100%);
+    color: #fff;
+    padding: 44px 22px 34px;
+  }
+  h1 { margin: 0 0 6px; font-size: 27px; font-weight: 800; letter-spacing: -0.2px; }
+  header p { margin: 0; color: #C7D4EA; font-size: 15px; }
+  main { padding: 26px 22px 48px; max-width: 620px; margin: 0 auto; }
+  .install {
+    display: block;
+    background: var(--navy);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 18px 20px;
+    border-radius: 14px;
+    margin: 0 0 14px;
+  }
+  .install:active { background: var(--navy-d); }
+  .hint { color: var(--grey); font-size: 15px; margin: 0 0 30px; }
+  h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--faint);
+    margin: 30px 0 10px;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  td { padding: 9px 0; border-bottom: 1px solid var(--panel); vertical-align: top; }
+  td:first-child { color: var(--grey); width: 42%; }
+  td:last-child { font-variant-numeric: tabular-nums; }
+  ol { margin: 0; padding-left: 22px; color: var(--grey); font-size: 15px; }
+  ol li { margin-bottom: 8px; }
+  .note {
+    background: var(--panel);
+    border-radius: 12px;
+    padding: 15px 17px;
+    font-size: 14px;
+    color: var(--grey);
+    margin-top: 30px;
+  }
+  .note strong { color: var(--warn); }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Tessarix Access</h1>
+  <p>NC Medicaid member app &middot; version 1.0, build 1</p>
+</header>
+
+<main>
+
+  <a class="install"
+     href="itms-services://?action=download-manifest&amp;url=https://pradeep-peddineni-amida.github.io/ta-install-6a9f0e52/manifest.plist">
+    Install on this iPhone
+  </a>
+  <p class="hint">
+    This only works in <strong>Safari on the iPhone itself</strong>. A desktop
+    browser, or Chrome on the phone, will do nothing: the link hands the install
+    to iOS, and only Safari does that.
+  </p>
+
+  <h2>What you are installing</h2>
+  <table>
+    <tr><td>App</td><td>NC Medicaid (Tessarix Access)</td></tr>
+    <tr><td>Bundle identifier</td><td><code>com.amida.tessarixaccess</code></td></tr>
+    <tr><td>Size</td><td>2.8 MB</td></tr>
+    <tr><td>Signed by</td><td>Apple Distribution, team MKV56VR8YQ</td></tr>
+    <tr><td>Profile</td><td>Tessarix Access Ad Hoc</td></tr>
+    <tr><td>Installs on</td><td><code>00008130-000A3DD614EA001C</code></td></tr>
+  </table>
+
+  <h2>If it does not work</h2>
+  <ol>
+    <li>Nothing happens: you are not in Safari, or not on the phone.</li>
+    <li>"Unable to install": the phone is not the device above. Ad Hoc builds
+        install only on devices named inside the app itself.</li>
+    <li>Icon appears then fails at the end: the download was interrupted. Tap
+        the icon to retry, or delete it and use the button again.</li>
+    <li>Installed but will not open: check
+        <em>Settings &rsaquo; General &rsaquo; VPN &amp; Device Management</em>.</li>
+  </ol>
+
+  <div class="note">
+    <strong>This page is temporary.</strong> It exists so one phone can install
+    one build, and it is deleted immediately afterwards. The app carries no real
+    member data: every name, claim and provider in it is synthetic.
+    <br><br>
+    The provisioning profile expires <strong>14 September 2026</strong>. The app
+    keeps working after that, but reinstalling needs a new profile and a new
+    build.
+  </div>
+
+</main>
+
+</body>
+</html>
